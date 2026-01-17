@@ -504,6 +504,19 @@
         }
         .project-links .btn { padding: 8px 16px; font-size: 0.8rem; }
 
+        /* Featured Project Highlight */
+        .featured-project {
+            grid-column: span 2;
+            border: 2px solid var(--accent);
+            animation: pulse 2s infinite;
+        }
+        
+        @media (max-width: 992px) {
+            .featured-project {
+                grid-column: span 1;
+            }
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;
@@ -654,7 +667,7 @@
                 
                 <div class="typewriter" style="margin-top: 20px;">
                     <span class="prompt">$</span> <span class="command">cat bio.txt</span>
-                    <div class="output">> CS Graduate '25 @ KMCT College of Engineering • Passionate about full-stack development & AI integration.</div>
+                    <div class="output">> CS Graduate '25 @ KMCT College of Engineering • Passionate about full-stack development & AI integration • Focused on explainable intelligence & adaptive systems</div>
                 </div>
                 
                 <div class="hero-buttons">
@@ -670,12 +683,12 @@
                 </div>
                 
                 <div class="tech-stack">
-                    <div class="tech-tag" style="animation-delay: 0.1s">JavaScript</div>
-                    <div class="tech-tag" style="animation-delay: 0.2s">React</div>
-                    <div class="tech-tag" style="animation-delay: 0.3s">Node.js</div>
-                    <div class="tech-tag" style="animation-delay: 0.4s">Python</div>
-                    <div class="tech-tag" style="animation-delay: 0.5s">MongoDB</div>
-                    <div class="tech-tag" style="animation-delay: 0.6s">TypeScript</div>
+                    <div class="tech-tag" style="animation-delay: 0.1s">React</div>
+                    <div class="tech-tag" style="animation-delay: 0.2s">TypeScript</div>
+                    <div class="tech-tag" style="animation-delay: 0.3s">Python</div>
+                    <div class="tech-tag" style="animation-delay: 0.4s">Node.js</div>
+                    <div class="tech-tag" style="animation-delay: 0.5s">AI/ML</div>
+                    <div class="tech-tag" style="animation-delay: 0.6s">System Design</div>
                 </div>
 
                 <div class="terminal-window">
@@ -699,8 +712,8 @@
                 
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I'm a passionate Computer Science graduate from KMCT College of Engineering, class of 2025. My journey started with simple static sites and evolved into complex full-stack applications involving AI and real-time data.</p>
-                        <p>I focus on writing clean, maintainable code. My experience includes building blood bank management systems, AI knowledge vaults, and rental platforms.</p>
+                        <p>Computer Science Engineering graduate (2025) and Full Stack Developer with a strong focus on <strong>system design, adaptive logic, and explainable intelligence</strong>. I build applications that go beyond CRUD by incorporating behavior modeling, feedback loops, and learning-driven decision systems.</p>
+                        <p>Proficient in React, TypeScript, Python, Flask, and modern AI integrations, with an emphasis on clarity, debuggability, and real-world reasoning.</p>
                         
                         <div class="timeline">
                             <div class="timeline-item">
@@ -708,15 +721,15 @@
                                 <div class="timeline-content">
                                     <h3>B.Tech Computer Science</h3>
                                     <p>KMCT College of Engineering</p>
-                                    <p>Specialized in Software Engineering & Web Technologies.</p>
+                                    <p>Specialized in Software Engineering, Web Technologies & AI Systems.</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
                                 <div class="timeline-date"><i class="fas fa-code"></i> 2023 - Present</div>
                                 <div class="timeline-content">
-                                    <h3>Full-Stack Development</h3>
-                                    <p>Independent Projects</p>
-                                    <p>Mastered MERN stack, Python Flask, and AI API integrations through hands-on building.</p>
+                                    <h3>Full-Stack & AI Development</h3>
+                                    <p>Independent Projects & Research</p>
+                                    <p>Mastered MERN stack, Python Flask, AI API integrations, and adaptive system design through hands-on building.</p>
                                 </div>
                             </div>
                         </div>
@@ -726,20 +739,20 @@
                         <h3><i class="fas fa-chart-bar"></i> Tech Proficiency</h3>
                         <br>
                         <div class="stat-item">
-                            <div class="stat-label"><span>Full-Stack (MERN)</span> <span class="stat-number">92%</span></div>
+                            <div class="stat-label"><span>Full-Stack Development</span> <span class="stat-number">92%</span></div>
                             <div class="stat-bar" data-width="92"></div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label"><span>Frontend (React/Tailwind)</span> <span class="stat-number">88%</span></div>
+                            <div class="stat-label"><span>Frontend (React/TypeScript)</span> <span class="stat-number">88%</span></div>
                             <div class="stat-bar" data-width="88"></div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label"><span>Backend (Node/Python)</span> <span class="stat-number">90%</span></div>
-                            <div class="stat-bar" data-width="90"></div>
+                            <div class="stat-label"><span>AI & Intelligent Systems</span> <span class="stat-number">85%</span></div>
+                            <div class="stat-bar" data-width="85"></div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label"><span>Database (Mongo/SQL)</span> <span class="stat-number">85%</span></div>
-                            <div class="stat-bar" data-width="85"></div>
+                            <div class="stat-label"><span>System Design</span> <span class="stat-number">90%</span></div>
+                            <div class="stat-bar" data-width="90"></div>
                         </div>
                     </div>
                 </div>
@@ -755,60 +768,102 @@
                 </div>
                 
                 <div class="projects-grid">
-                    <!-- Project 1: Blood Bank System -->
+                    <!-- Featured Project 1: IntentOS -->
+                    <div class="project-card gradient-border featured-project">
+                        <!-- Project Image -->
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IntentOS Adaptive System" class="project-image" loading="lazy">
+                        
+                        <div class="project-header">
+                            <h3 class="project-title"><i class="fas fa-brain"></i> IntentOS – Adaptive Intent-Driven Learning System</h3>
+                            <p class="project-desc">An adaptive OS layer that infers user intent from behavioral signals and dynamically modifies application flow. Features an explainable intent inference engine, policy-driven adaptation layer, and outcome-based learning system.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">System Design</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Temporal Analysis</span>
+                                <span class="tech-badge">Explainable AI</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/BASILPETER2002/intent-os" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <button class="btn" disabled><i class="fas fa-flask"></i> Research Phase</button>
+                        </div>
+                    </div>
+
+                    <!-- Featured Project 2: Echoform -->
+                    <div class="project-card gradient-border">
+                        <!-- Project Image -->
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Echoform Cognitive Modeling" class="project-image" loading="lazy">
+                        
+                        <div class="project-header">
+                            <h3 class="project-title"><i class="fas fa-project-diagram"></i> Echoform – Cognitive Identity Modeling System</h3>
+                            <p class="project-desc">A probabilistic engine that infers evolving user behavioral traits from textual interactions. Implements semantic signal extraction, belief update pipelines with temporal decay, and active learning through clarifying questions.</p>
+                            <div class="project-tech">
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">FastAPI</span>
+                                <span class="tech-badge">Machine Learning</span>
+                                <span class="tech-badge">Probabilistic Models</span>
+                                <span class="tech-badge">Semantic Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/BASILPETER2002/echoform" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <button class="btn" disabled><i class="fas fa-flask"></i> Capstone Project</button>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Blood Bank System -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
                         <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blood Bank System Dashboard" class="project-image" loading="lazy">
                         
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-tint"></i> Blood Bank System</h3>
-                            <p class="project-desc">Full-stack MERN application connecting donors and hospitals. Features role-based dashboards, JWT auth, and inventory management.</p>
+                            <h3 class="project-title"><i class="fas fa-tint"></i> Blood Bank Management System</h3>
+                            <p class="project-desc">Full-stack MERN application connecting donors and hospitals. Features role-based dashboards, JWT auth, and real-time inventory management to reduce emergency response time.</p>
                             <div class="project-tech">
                                 <span class="tech-badge">React</span>
                                 <span class="tech-badge">Node.js</span>
                                 <span class="tech-badge">MongoDB</span>
                                 <span class="tech-badge">Express</span>
+                                <span class="tech-badge">JWT Auth</span>
                             </div>
                         </div>
                         <div class="project-links">
-                            <!-- Updated to specific GitHub repo -->
                             <a href="https://github.com/BASILPETER2002/blood-bank-system" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
-                            <!-- Add demo link if available -->
-                             <a href="https://blood-bank-project-ecru.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://blood-bank-project-ecru.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
 
-                    <!-- Project 2: SyncVerse AI -->
+                    <!-- Project 4: SyncVerse AI -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
                         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SyncVerse AI Interface" class="project-image" loading="lazy">
                         
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-brain"></i> SyncVerse AI</h3>
-                            <p class="project-desc">Knowledge vault enabling users to chat with PDFs and YouTube videos. Integrates Google Gemini API and OCR for content analysis.</p>
+                            <h3 class="project-title"><i class="fas fa-robot"></i> SyncVerse AI – AI-Powered Knowledge Platform</h3>
+                            <p class="project-desc">Knowledge vault enabling users to chat with PDFs and YouTube videos. Integrates Google Gemini API, OCR fallback with Tesseract, and multi-document question answering.</p>
                             <div class="project-tech">
                                 <span class="tech-badge">Python Flask</span>
                                 <span class="tech-badge">React</span>
                                 <span class="tech-badge">Gemini AI</span>
                                 <span class="tech-badge">OCR</span>
+                                <span class="tech-badge">Vector Search</span>
                             </div>
                         </div>
                         <div class="project-links">
-                            <!-- Updated to specific GitHub repo -->
                             <a href="https://github.com/BASILPETER2002/syncverse-ai" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
-                            <!-- Add demo link if available -->
-                             <a href="https://syncverse.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://syncverse.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
 
-                    <!-- Project 3: EventFlow -->
+                    <!-- Project 5: EventFlow -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
                         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EventFlow Rental Platform" class="project-image" loading="lazy">
                         
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-calendar-alt"></i> EventFlow</h3>
-                            <p class="project-desc">Event equipment rental platform with a draggable cart, real-time inventory tracking, and Supabase backend.</p>
+                            <h3 class="project-title"><i class="fas fa-calendar-alt"></i> EventFlow – Equipment Rental Platform</h3>
+                            <p class="project-desc">Event equipment rental platform with real-time availability tracking, interactive cart functionality, and Supabase backend for inventory management.</p>
                             <div class="project-tech">
                                 <span class="tech-badge">TypeScript</span>
                                 <span class="tech-badge">React 18</span>
@@ -817,31 +872,28 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <!-- Updated to specific GitHub repo -->
                             <a href="https://github.com/BASILPETER2002/eventflow" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
-                            <!-- Add demo link if available -->
                             <a href="https://eventflow.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
 
-                    <!-- Project 4: Family Portal -->
+                    <!-- Project 6: Family Portal -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
                         <img src="https://images.unsplash.com/photo-1553531889-e6cf4d692b1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Tree Visualization" class="project-image" loading="lazy">
                         
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-tree"></i> Family Portal</h3>
-                            <p class="project-desc">Private heritage portal featuring an interactive family tree, geolocation mapping with Leaflet.js, and secure member access.</p>
+                            <h3 class="project-title"><i class="fas fa-tree"></i> Kodiyattil Family Website</h3>
+                            <p class="project-desc">Private heritage portal featuring an interactive family tree, digital archives, and secure member access. A personal project preserving family history with modern web technologies.</p>
                             <div class="project-tech">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Flask</span>
-                                <span class="tech-badge">SQLite</span>
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Firebase</span>
                                 <span class="tech-badge">Leaflet.js</span>
+                                <span class="tech-badge">Privacy-Focused</span>
                             </div>
                         </div>
                         <div class="project-links">
-                            <!-- Changed to disabled button instead of anchor tag -->
-                            <button class="btn" disabled><i class="fas fa-lock"></i> Private</button>
+                            <button class="btn" disabled><i class="fas fa-lock"></i> Private Project</button>
                         </div>
                     </div>
                 </div>
@@ -852,39 +904,43 @@
                     <div class="section-icon"><i class="fas fa-cogs"></i></div>
                     <div>
                         <h2 class="section-title">skills.json</h2>
-                        <span class="section-subtitle">{ "stack": ["frontend", "backend", "devops"] }</span>
+                        <span class="section-subtitle">{ "stack": ["frontend", "backend", "ai", "devops"] }</span>
                     </div>
                 </div>
                 
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3><i class="fas fa-code"></i> Languages</h3>
+                        <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
                         <div class="project-tech">
                             <span class="tech-badge">JavaScript (ES6+)</span>
                             <span class="tech-badge">TypeScript</span>
                             <span class="tech-badge">Python</span>
-                            <span class="tech-badge">HTML5/CSS3</span>
-                            <span class="tech-badge">SQL</span>
-                        </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-                        <div class="project-tech">
-                            <span class="tech-badge">React</span>
-                            <span class="tech-badge">Node.js</span>
-                            <span class="tech-badge">Express</span>
-                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">Node.js/Express</span>
+                            <span class="tech-badge">Flask/FastAPI</span>
                             <span class="tech-badge">Tailwind CSS</span>
                         </div>
                     </div>
                     <div class="skill-category">
-                        <h3><i class="fas fa-database"></i> Tools & DB</h3>
+                        <h3><i class="fas fa-brain"></i> AI & Intelligent Systems</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">Gemini AI API</span>
+                            <span class="tech-badge">Semantic Embeddings</span>
+                            <span class="tech-badge">Explainable AI</span>
+                            <span class="tech-badge">OCR (Tesseract)</span>
+                            <span class="tech-badge">Probabilistic Models</span>
+                            <span class="tech-badge">Adaptive Systems</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Databases & Tools</h3>
                         <div class="project-tech">
                             <span class="tech-badge">MongoDB</span>
                             <span class="tech-badge">PostgreSQL</span>
                             <span class="tech-badge">Supabase</span>
                             <span class="tech-badge">Git & GitHub</span>
                             <span class="tech-badge">VS Code</span>
+                            <span class="tech-badge">System Design</span>
                         </div>
                     </div>
                 </div>
@@ -903,11 +959,12 @@
                     <div class="gradient-border" style="padding: 30px; border-radius: 10px;">
                         <h3 class="project-title" style="margin-bottom: 20px;">Connect With Me</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 30px;">
-                            I'm actively seeking full-stack development opportunities. Whether you have a question or just want to say hi, my inbox is always open.
+                            I'm actively seeking full-stack development opportunities, particularly in roles involving system design, AI integration, or adaptive software. Whether you have a question or want to discuss potential collaborations, my inbox is always open.
                         </p>
                         <div class="project-links" style="background: transparent; border: none; padding: 0; flex-direction: column;">
                             <a href="mailto:basilpeter15kodiyattil@gmail.com" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Email Me</a>
                             <a href="https://www.linkedin.com/in/basil-peter-00220b263/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/BASILPETER2002" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     
@@ -997,10 +1054,10 @@
         // --- 3. Terminal Simulation ---
         const terminalOutput = document.getElementById('terminalOutput');
         const lines = [
-            { cmd: "whoami", out: "basil-peter --role full-stack-dev" },
+            { cmd: "whoami", out: "basil-peter --role full-stack-dev --focus adaptive-systems" },
             { cmd: "location", out: "India (IST)" },
-            { cmd: "cat stack.txt", out: "MERN, Python, Next.js, AI Integration" },
-            { cmd: "git status", out: "On branch main, working on new ideas..." }
+            { cmd: "cat stack.txt", out: "React, TypeScript, Python, Node.js, AI Integration, System Design" },
+            { cmd: "git status", out: "On branch main, working on IntentOS & Echoform..." }
         ];
         
         let lineDelay = 0;
@@ -1062,58 +1119,57 @@
             });
         });
 
-        // --- 5. Form Handling (Mock) ---
         // --- 5. Form Handling (Real with Formspree) ---
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const btn = this.querySelector('button');
-    const originalContent = btn.innerHTML;
-    const originalText = btn.textContent;
-    
-    btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
-    btn.disabled = true;
-    
-    // Get form data
-    const formData = new FormData(this);
-    
-    // Send to Formspree
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (response.ok) {
-            // Success
-            btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
-            btn.style.background = 'var(--success)';
-            this.reset();
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            setTimeout(() => {
-                btn.innerHTML = originalContent;
-                btn.style.background = '';
-                btn.disabled = false;
-            }, 3000);
-        } else {
-            // Error
-            throw new Error('Form submission failed');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
-        btn.style.background = 'var(--error)';
-        
-        setTimeout(() => {
-            btn.innerHTML = originalContent;
-            btn.style.background = '';
-            btn.disabled = false;
-        }, 3000);
-    });
-});
+            const btn = this.querySelector('button');
+            const originalContent = btn.innerHTML;
+            const originalText = btn.textContent;
+            
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
+            btn.disabled = true;
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Send to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success
+                    btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                    btn.style.background = 'var(--success)';
+                    this.reset();
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalContent;
+                        btn.style.background = '';
+                        btn.disabled = false;
+                    }, 3000);
+                } else {
+                    // Error
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
+                btn.style.background = 'var(--error)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                }, 3000);
+            });
+        });
 
         // Date Footer
         const dateSpan = document.getElementById('currentDate');
