@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Basil Peter, a Full-Stack Developer specializing in MERN Stack, Python, and AI integration. View projects and skills.">
-    <meta name="keywords" content="Basil Peter, Full Stack Developer, Web Developer, React, Node.js, Portfolio, MERN Stack">
+    <meta name="description"
+        content="Portfolio of Basil Peter, a Full-Stack Developer specializing in MERN Stack, Python, and AI integration. View projects and skills.">
+    <meta name="keywords"
+        content="Basil Peter, Full Stack Developer, Web Developer, React, Node.js, Portfolio, MERN Stack">
     <meta name="author" content="Basil Peter">
-    
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Basil Peter | Full-Stack Developer">
-    <meta property="og:description" content="Building impactful solutions with modern full-stack tech. Check out my projects and skills.">
-    
+    <meta property="og:description"
+        content="Building impactful solutions with modern full-stack tech. Check out my projects and skills.">
+
     <title>Basil Peter | Full-Stack Developer</title>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             /* Theme Variables */
@@ -41,10 +47,16 @@
         }
 
         /* Resets & Base Styles */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { scroll-behavior: smooth; }
-        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: var(--font-sans);
             background: var(--terminal-bg);
@@ -56,40 +68,85 @@
 
         /* --- Animations --- */
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
-        
+
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(88, 166, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(88, 166, 255, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(88, 166, 255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(88, 166, 255, 0);
+            }
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
 
         @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(-2px, -2px);
+            }
+
+            60% {
+                transform: translate(2px, 2px);
+            }
+
+            80% {
+                transform: translate(2px, -2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
         }
 
         @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes slideIn {
-            to { opacity: 1; transform: translateX(0); }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         /* --- Components --- */
-        
+
         /* Particles */
         #particles-js {
             position: fixed;
@@ -106,19 +163,27 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            background: var(--card-bg); /* Ensure content has background */
+            background: var(--card-bg);
+            /* Ensure content has background */
         }
+
         .gradient-border::before {
             content: '';
             position: absolute;
-            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
             background: var(--gradient-1);
             border-radius: 12px;
             z-index: -1;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        .gradient-border:hover::before { opacity: 1; }
+
+        .gradient-border:hover::before {
+            opacity: 1;
+        }
 
         /* Cursor */
         .typewriter-cursor {
@@ -141,6 +206,7 @@
             background: transparent;
             z-index: 1000;
         }
+
         .scroll-progress-bar {
             height: 100%;
             background: var(--gradient-1);
@@ -161,10 +227,12 @@
             transition: all 0.3s ease;
             height: var(--header-height);
         }
+
         .terminal-header.scrolled {
             background: rgba(1, 4, 9, 0.98);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
+
         .terminal-dots {
             display: flex;
             gap: 8px;
@@ -173,17 +241,31 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
         .dot {
-            width: 12px; height: 12px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
             cursor: pointer;
             transition: transform 0.2s;
         }
-        .dot:hover { transform: scale(1.2); }
-        .dot:nth-child(1) { background: var(--error); }
-        .dot:nth-child(2) { background: var(--warning); }
-        .dot:nth-child(3) { background: var(--success); }
-        
+
+        .dot:hover {
+            transform: scale(1.2);
+        }
+
+        .dot:nth-child(1) {
+            background: var(--error);
+        }
+
+        .dot:nth-child(2) {
+            background: var(--warning);
+        }
+
+        .dot:nth-child(3) {
+            background: var(--success);
+        }
+
         .terminal-title {
             text-align: center;
             font-family: var(--font-mono);
@@ -212,7 +294,12 @@
             transition: transform 0.3s ease;
             z-index: 900;
         }
-        .logo { text-align: center; margin-bottom: 40px; }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
         .logo h1 {
             font-family: var(--font-mono);
             font-size: 1.8rem;
@@ -220,20 +307,42 @@
             margin-bottom: 5px;
             cursor: default;
         }
-        .logo span { color: var(--text-secondary); font-size: 0.8rem; }
-        
-        .nav-links { list-style: none; }
+
+        .logo span {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
         .nav-links li {
             opacity: 0;
             transform: translateX(-20px);
             animation: slideIn 0.5s forwards;
         }
+
         /* Staggered animation delays for nav items */
-        .nav-links li:nth-child(1) { animation-delay: 0.1s; }
-        .nav-links li:nth-child(2) { animation-delay: 0.2s; }
-        .nav-links li:nth-child(3) { animation-delay: 0.3s; }
-        .nav-links li:nth-child(4) { animation-delay: 0.4s; }
-        .nav-links li:nth-child(5) { animation-delay: 0.5s; }
+        .nav-links li:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .nav-links li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .nav-links li:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .nav-links li:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .nav-links li:nth-child(5) {
+            animation-delay: 0.5s;
+        }
 
         .nav-links a {
             display: flex;
@@ -247,7 +356,9 @@
             transition: all 0.3s ease;
             border-left: 3px solid transparent;
         }
-        .nav-links a:hover, .nav-links a.active {
+
+        .nav-links a:hover,
+        .nav-links a.active {
             background: var(--editor-bg);
             color: var(--accent);
             border-left-color: var(--accent);
@@ -259,16 +370,21 @@
             gap: 15px;
             margin-top: 40px;
         }
+
         .social-links a {
             color: var(--text-secondary);
             font-size: 1.2rem;
-            width: 40px; height: 40px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: var(--editor-bg);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
             transition: all 0.3s;
         }
+
         .social-links a:hover {
             color: var(--accent);
             transform: translateY(-3px);
@@ -288,7 +404,11 @@
             transition: all 0.8s ease;
             scroll-margin-top: 100px;
         }
-        section.active { opacity: 1; transform: translateY(0); }
+
+        section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         .section-header {
             display: flex;
@@ -296,19 +416,25 @@
             gap: 15px;
             margin-bottom: 40px;
         }
+
         .section-icon {
             background: var(--accent);
             color: #fff;
-            width: 45px; height: 45px;
+            width: 45px;
+            height: 45px;
             border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 1.3rem;
         }
+
         .section-title {
             font-size: 2rem;
             color: var(--text);
             font-weight: 600;
         }
+
         .section-subtitle {
             font-family: var(--font-mono);
             color: var(--accent);
@@ -317,18 +443,24 @@
         }
 
         /* Hero Section */
-        .hero { padding: 20px 0 60px; }
+        .hero {
+            padding: 20px 0 60px;
+        }
+
         .hero h1 {
-                font-size: clamp(2rem, 5vw, 3.5rem); /* Viewport units for mobile scaling */
-                line-height: 1.1;
-                margin: 20px 0;
-                background: var(--gradient-1);
-                -webkit-background-clip: text;
-                background-clip: text; /* Standard property */
-                -webkit-text-fill-color: transparent;
-                color: transparent; /* Standard property for modern browsers */
-            }
-                    
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            /* Viewport units for mobile scaling */
+            line-height: 1.1;
+            margin: 20px 0;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            /* Standard property */
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            /* Standard property for modern browsers */
+        }
+
         .typewriter {
             font-family: var(--font-mono);
             font-size: 1.1rem;
@@ -336,11 +468,29 @@
             margin-bottom: 20px;
             min-height: 30px;
         }
-        .prompt { color: var(--success); margin-right: 8px; }
-        .command { color: var(--accent); }
-        .output { color: var(--text-secondary); margin-top: 5px; font-style: italic; }
 
-        .hero-buttons { display: flex; gap: 15px; margin-top: 40px; flex-wrap: wrap; }
+        .prompt {
+            color: var(--success);
+            margin-right: 8px;
+        }
+
+        .command {
+            color: var(--accent);
+        }
+
+        .output {
+            color: var(--text-secondary);
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
         .btn {
             padding: 12px 28px;
             background: var(--editor-bg);
@@ -352,24 +502,45 @@
             transition: all 0.3s ease;
             text-decoration: none;
             border-radius: 6px;
-            display: inline-flex; align-items: center; gap: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             position: relative;
             overflow: hidden;
             z-index: 1;
         }
+
         .btn::before {
             content: '';
             position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
             background: var(--gradient-1);
             transition: left 0.3s ease;
             z-index: -1;
         }
-        .btn:hover { border-color: transparent; color: white; }
-        .btn:hover::before { left: 0; }
-        .btn-primary { background: var(--accent); color: white; border-color: var(--accent); }
-        .btn-primary:hover { box-shadow: 0 10px 20px rgba(88, 166, 255, 0.3); transform: translateY(-2px); }
+
+        .btn:hover {
+            border-color: transparent;
+            color: white;
+        }
+
+        .btn:hover::before {
+            left: 0;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 20px rgba(88, 166, 255, 0.3);
+            transform: translateY(-2px);
+        }
 
         /* Disabled button styles */
         .btn:disabled {
@@ -377,15 +548,23 @@
             cursor: not-allowed;
             transform: none !important;
         }
+
         .btn:disabled:hover {
             border-color: var(--border);
             color: var(--text);
         }
+
         .btn:disabled:hover::before {
             left: -100%;
         }
 
-        .tech-stack { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 40px; }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
         .tech-tag {
             background: var(--card-bg);
             border: 1px solid var(--border);
@@ -398,6 +577,7 @@
             opacity: 0;
             animation: fadeInUp 0.5s forwards;
         }
+
         .tech-tag:hover {
             border-color: var(--accent);
             color: var(--accent);
@@ -410,17 +590,22 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             margin-top: 50px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             opacity: 0;
             animation: fadeInUp 0.8s forwards 1s;
         }
+
         .terminal-header-bar {
             background: var(--sidebar-bg);
             padding: 10px 15px;
             border-bottom: 1px solid var(--border);
-            display: flex; justify-content: space-between;
-            font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
         }
+
         .terminal-body {
             padding: 20px;
             font-family: var(--font-mono);
@@ -428,44 +613,132 @@
             height: 250px;
             overflow-y: auto;
         }
-        .terminal-line { margin-bottom: 8px; opacity: 0; animation: slideIn 0.3s forwards; }
+
+        .terminal-line {
+            margin-bottom: 8px;
+            opacity: 0;
+            animation: slideIn 0.3s forwards;
+        }
 
         /* About & Timeline */
-        .about-content { display: grid; grid-template-columns: 3fr 2fr; gap: 40px; }
-        .about-text p { margin-bottom: 20px; color: var(--text-secondary); }
-        
-        .timeline { position: relative; padding-left: 30px; margin-top: 30px; }
+        .about-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 40px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+
         .timeline::before {
-            content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--border);
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
         }
-        .timeline-item { position: relative; margin-bottom: 30px; }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
         .timeline-item::before {
-            content: ''; position: absolute; left: -36px; top: 5px; width: 14px; height: 14px;
-            background: var(--accent); border-radius: 50%; border: 3px solid var(--editor-bg);
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid var(--editor-bg);
         }
-        .timeline-date { color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 5px; }
+
+        .timeline-date {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+
         .timeline-content {
-            background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
         }
-        .timeline-content h3 { font-size: 1.1rem; margin-bottom: 5px; }
-        .timeline-content p { font-size: 0.9rem; margin-bottom: 0; }
+
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
 
         .about-stats {
-            background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px;
         }
-        .stat-item { margin-bottom: 20px; }
-        .stat-label { display: flex; justify-content: space-between; margin-bottom: 8px; font-family: var(--font-mono); font-size: 0.85rem; }
+
+        .stat-item {
+            margin-bottom: 20px;
+        }
+
+        .stat-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+        }
+
         .stat-bar {
-            height: 6px; background: var(--editor-bg); border-radius: 3px; overflow: hidden;
+            height: 6px;
+            background: var(--editor-bg);
+            border-radius: 3px;
+            overflow: hidden;
         }
+
         .stat-bar::before {
-            content: ''; display: block; height: 100%; background: var(--gradient-1);
-            width: 0; transition: width 1.5s ease-out;
+            content: '';
+            display: block;
+            height: 100%;
+            background: var(--gradient-1);
+            width: 0;
+            transition: width 1.5s ease-out;
         }
-        section.active .stat-bar[data-width="92"]::before { width: 92%; }
-        section.active .stat-bar[data-width="88"]::before { width: 88%; }
-        section.active .stat-bar[data-width="90"]::before { width: 90%; }
-        section.active .stat-bar[data-width="85"]::before { width: 85%; }
+
+        section.active .stat-bar[data-width="92"]::before {
+            width: 92%;
+        }
+
+        section.active .stat-bar[data-width="88"]::before {
+            width: 88%;
+        }
+
+        section.active .stat-bar[data-width="90"]::before {
+            width: 90%;
+        }
+
+        section.active .stat-bar[data-width="85"]::before {
+            width: 85%;
+        }
 
         /* Projects Grid */
         .projects-grid {
@@ -473,46 +746,89 @@
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 25px;
         }
+
         .project-card {
             border: 1px solid var(--border);
             border-radius: 10px;
             background: var(--card-bg);
             transition: transform 0.3s;
-            height: 100%; display: flex; flex-direction: column;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
         }
-        .project-card:hover { transform: translateY(-5px); }
-        
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
         /* Project Image Styles */
         .project-image {
             width: 100%;
             height: 180px;
             object-fit: cover;
             border-bottom: 1px solid var(--border);
+            transition: transform 0.5s ease;
         }
-        .project-header { 
-            padding: 25px; 
-            flex-grow: 1; 
+
+        .project-card:hover .project-image {
+            transform: scale(1.05);
         }
-        .project-title { font-size: 1.3rem; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .project-desc { font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px; }
-        .project-tech { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .project-header {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
         .tech-badge {
-            background: var(--editor-bg); color: var(--accent); padding: 4px 10px;
-            border-radius: 12px; font-size: 0.75rem; font-family: var(--font-mono);
+            background: var(--editor-bg);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
         }
+
         .project-links {
-            padding: 15px 25px; border-top: 1px solid var(--border); display: flex; gap: 10px; background: rgba(0,0,0,0.2);
+            padding: 15px 25px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 10px;
+            background: rgba(0, 0, 0, 0.2);
         }
-        .project-links .btn { padding: 8px 16px; font-size: 0.8rem; }
+
+        .project-links .btn {
+            padding: 8px 16px;
+            font-size: 0.8rem;
+        }
 
         /* Featured Project Highlight */
         .featured-project {
             grid-column: span 2;
             border: 2px solid var(--accent);
-            animation: pulse 2s infinite;
+            animation: pulse 3s ease-in-out 3;
         }
-        
+
         @media (max-width: 992px) {
             .featured-project {
                 grid-column: span 1;
@@ -521,77 +837,177 @@
 
         /* Skills Grid */
         .skills-grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
         }
+
         .skill-category {
-            background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 25px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 25px;
             transition: all 0.3s;
         }
-        .skill-category:hover { border-color: var(--accent); transform: translateY(-3px); }
-        .skill-category h3 { margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+
+        .skill-category:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
         /* Contact */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; }
-        .contact-form { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 30px; }
-        .form-group { margin-bottom: 20px; }
-        .form-input, .form-textarea {
-            width: 100%; padding: 12px; background: var(--editor-bg); border: 1px solid var(--border);
-            border-radius: 6px; color: var(--text); font-family: var(--font-sans);
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-input,
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            background: var(--editor-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text);
+            font-family: var(--font-sans);
             transition: border-color 0.3s;
         }
-        .form-input:focus, .form-textarea:focus { outline: none; border-color: var(--accent); }
-        .form-textarea { min-height: 120px; resize: vertical; }
+
+        .form-input:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
 
         /* Footer */
         .footer {
-            margin-top: 80px; padding: 40px 0; border-top: 1px solid var(--border);
-            text-align: center; color: var(--text-secondary); font-family: var(--font-mono); font-size: 0.85rem;
+            margin-top: 80px;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
         }
 
         /* Mobile Responsive */
         .menu-toggle {
-            display: none; position: fixed; top: 15px; left: 20px; z-index: 1100;
-            background: var(--editor-bg); border: 1px solid var(--border);
-            color: var(--text); width: 35px; height: 35px; border-radius: 4px;
-            align-items: center; justify-content: center; cursor: pointer;
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 20px;
+            z-index: 1100;
+            background: var(--editor-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            width: 35px;
+            height: 35px;
+            border-radius: 4px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
         }
+
         .overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8); z-index: 800; opacity: 0; visibility: hidden; transition: all 0.3s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 800;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
         }
-        .overlay.active { opacity: 1; visibility: visible; }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
 
         @media (max-width: 992px) {
-            .main-container { grid-template-columns: 1fr; }
-            .sidebar {
-                position: fixed; left: -280px; width: 260px; height: 100vh; top: 0;
-                z-index: 1000; box-shadow: 5px 0 30px rgba(0,0,0,0.5);
+            .main-container {
+                grid-template-columns: 1fr;
             }
-            .sidebar.active { left: 0; }
-            .menu-toggle { display: flex; }
-            .main-content { padding: 30px 20px; }
-            
-            .hero h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); } /* Adjusted for mobile */
-            
-            .about-content, .contact-grid { grid-template-columns: 1fr; }
-            
+
+            .sidebar {
+                position: fixed;
+                left: -280px;
+                width: 260px;
+                height: 100vh;
+                top: 0;
+                z-index: 1000;
+                box-shadow: 5px 0 30px rgba(0, 0, 0, 0.5);
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+
+            .hero h1 {
+                font-size: clamp(1.8rem, 6vw, 2.5rem);
+            }
+
+            /* Adjusted for mobile */
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
             /* Mobile Terminal Window - Keep it but make responsive */
-            .terminal-window { 
-                display: block; /* Instead of none */
+            .terminal-window {
+                display: block;
+                /* Instead of none */
                 max-height: 180px;
                 font-size: 0.8rem;
                 margin-top: 30px;
             }
+
             .terminal-body {
                 height: 120px;
                 padding: 15px;
             }
-            
+
             /* Project images on mobile */
             .project-image {
                 height: 150px;
             }
-            
+
             /* Adjust project grid for mobile */
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -604,21 +1020,139 @@
             .hero-buttons {
                 flex-direction: column;
             }
+
             .btn {
                 width: 100%;
                 justify-content: center;
             }
+
             .terminal-window {
                 max-height: 160px;
                 margin-top: 20px;
             }
         }
+
+        /* --- ApplySense Enhancements --- */
+        .appliesense-card {
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .appliesense-card:hover {
+            box-shadow: 0 0 25px rgba(88, 166, 255, 0.6);
+            border-color: var(--accent);
+        }
+
+        @keyframes badgePulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(88, 166, 255, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(88, 166, 255, 0);
+            }
+        }
+
+        .ai-badge {
+            background: var(--accent);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-family: var(--font-mono);
+            animation: badgePulse 2s infinite;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .metric-item {
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        .metric-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .metric-label {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+        }
+
+        .ai-bg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.08;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background: var(--editor-bg);
+            margin: 8% auto;
+            padding: 30px;
+            border: 1px solid var(--border);
+            width: 60%;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 992px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div id="particles-js"></div>
-    <div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar"></div>
+    </div>
 
     <div class="terminal-header" id="terminalHeader">
         <div class="terminal-dots">
@@ -640,7 +1174,7 @@
                 <h1 class="glitch" data-text="{ BP }">{ BP }</h1>
                 <span>// full-stack developer</span>
             </div>
-            
+
             <ul class="nav-links">
                 <li><a href="#home" class="active"><i class="fas fa-home"></i> home.ts</a></li>
                 <li><a href="#about"><i class="fas fa-user"></i> about.md</a></li>
@@ -648,30 +1182,33 @@
                 <li><a href="#skills"><i class="fas fa-cogs"></i> skills.json</a></li>
                 <li><a href="#contact"><i class="fas fa-envelope"></i> contact.rs</a></li>
             </ul>
-            
+
             <div class="social-links">
-                <a href="https://github.com/BASILPETER2002" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/basil-peter-00220b263/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/BASILPETER2002" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/basil-peter-00220b263/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:basilpeter15kodiyattil@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </nav>
 
         <div class="main-content">
-            
+
             <section id="home" class="active">
                 <div class="typewriter">
-                    <span class="prompt">$</span> 
+                    <span class="prompt">$</span>
                     <span class="command" id="typingCommand"></span>
                     <span class="typewriter-cursor"></span>
                 </div>
-                
-                <h1>Building Impactful Solutions<br>with Modern Full-Stack Tech</h1>
-                
+
+                <h1>Designing Intelligent Systems<br>from Signals to Software.</h1>
+
                 <div class="typewriter" style="margin-top: 20px;">
                     <span class="prompt">$</span> <span class="command">cat bio.txt</span>
-                    <div class="output">> CS Graduate '25 @ KMCT College of Engineering • Passionate about full-stack development & AI integration • Focused on explainable intelligence & adaptive systems</div>
+                    <div class="output">> CS Graduate '25 @ KMCT College of Engineering • Passionate about full-stack
+                        development & AI integration • Focused on explainable intelligence & adaptive systems</div>
                 </div>
-                
+
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary pulse">
                         <i class="fas fa-rocket"></i> View Projects
@@ -683,7 +1220,7 @@
                         <i class="fas fa-file-alt"></i> Resume
                     </a>
                 </div>
-                
+
                 <div class="tech-stack">
                     <div class="tech-tag" style="animation-delay: 0.1s">React</div>
                     <div class="tech-tag" style="animation-delay: 0.2s">TypeScript</div>
@@ -699,7 +1236,7 @@
                         <span><i class="fas fa-times"></i></span>
                     </div>
                     <div class="terminal-body" id="terminalOutput">
-                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -711,12 +1248,17 @@
                         <span class="section-subtitle">// personal info & education</span>
                     </div>
                 </div>
-                
+
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Computer Science Engineering graduate (2025) and Full Stack Developer with a strong focus on <strong>system design, adaptive logic, and explainable intelligence</strong>. I build applications that go beyond CRUD by incorporating behavior modeling, feedback loops, and learning-driven decision systems.</p>
-                        <p>Proficient in React, TypeScript, Python, Flask, and modern AI integrations, with an emphasis on clarity, debuggability, and real-world reasoning.</p>
-                        
+                        <p>Computer Science Engineering graduate (2025) and Full Stack Developer with a strong focus on
+                            <strong>system design, adaptive logic, and explainable intelligence</strong>. I build
+                            applications that go beyond CRUD by incorporating behavior modeling, feedback loops, and
+                            learning-driven decision systems.
+                        </p>
+                        <p>Proficient in React, TypeScript, Python, Flask, and modern AI integrations, with an emphasis
+                            on clarity, debuggability, and real-world reasoning.</p>
+
                         <div class="timeline">
                             <div class="timeline-item">
                                 <div class="timeline-date"><i class="fas fa-graduation-cap"></i> 2021 - 2025</div>
@@ -731,29 +1273,34 @@
                                 <div class="timeline-content">
                                     <h3>Full-Stack & AI Development</h3>
                                     <p>Independent Projects & Research</p>
-                                    <p>Mastered MERN stack, Python Flask, AI API integrations, and adaptive system design through hands-on building.</p>
+                                    <p>Mastered MERN stack, Python Flask, AI API integrations, and adaptive system
+                                        design through hands-on building.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="about-stats">
                         <h3><i class="fas fa-chart-bar"></i> Tech Proficiency</h3>
                         <br>
                         <div class="stat-item">
-                            <div class="stat-label"><span>Full-Stack Development</span> <span class="stat-number">92%</span></div>
+                            <div class="stat-label"><span>Full-Stack Development</span> <span
+                                    class="stat-number">92%</span></div>
                             <div class="stat-bar" data-width="92"></div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label"><span>Frontend (React/TypeScript)</span> <span class="stat-number">88%</span></div>
+                            <div class="stat-label"><span>Frontend (React/TypeScript)</span> <span
+                                    class="stat-number">88%</span></div>
                             <div class="stat-bar" data-width="88"></div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label"><span>AI & Intelligent Systems</span> <span class="stat-number">85%</span></div>
+                            <div class="stat-label"><span>AI & Intelligent Systems</span> <span
+                                    class="stat-number">85%</span></div>
                             <div class="stat-bar" data-width="85"></div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-label"><span>System Design</span> <span class="stat-number">90%</span></div>
+                            <div class="stat-label"><span>System Design</span> <span class="stat-number">90%</span>
+                            </div>
                             <div class="stat-bar" data-width="90"></div>
                         </div>
                     </div>
@@ -768,16 +1315,24 @@
                         <span class="section-subtitle">// portfolio showcase</span>
                     </div>
                 </div>
-                
+
                 <div class="projects-grid">
                     <!-- Featured Project 1: IntentOS -->
                     <div class="project-card gradient-border featured-project">
                         <!-- Project Image -->
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="IntentOS Adaptive System" class="project-image" loading="lazy">
-                        
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="IntentOS Adaptive System" class="project-image" loading="lazy">
+
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-brain"></i> IntentOS – Adaptive Intent-Driven Learning System</h3>
-                            <p class="project-desc">An adaptive OS layer that infers user intent from behavioral signals and dynamically modifies application flow. Features an explainable intent inference engine, policy-driven adaptation layer, and outcome-based learning system.</p>
+                            <h3 class="project-title"><i class="fas fa-brain"></i> IntentOS – Adaptive Intent-Driven
+                                Learning System</h3>
+                            <p class="project-desc">An adaptive OS layer that infers user intent from behavioral signals
+                                and dynamically modifies application flow. Features an explainable intent inference
+                                engine, policy-driven adaptation layer, and outcome-based learning system.</p>
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> Architecture design, intent inference modeling, and MVP-level
+                                experimentation.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-badge">System Design</span>
                                 <span class="tech-badge">React</span>
@@ -787,66 +1342,168 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/BASILPETER2002/intent-os" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/BASILPETER2002/intent-os" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
                             <button class="btn" disabled><i class="fas fa-flask"></i> Research Phase</button>
                         </div>
                     </div>
 
                     <!-- Featured Project: Essence -->
-<div class="project-card gradient-border featured-project">
-    <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=800&q=80"
-         alt="Essence E-commerce Platform"
-         class="project-image"
-         loading="lazy">
+                    <div class="project-card gradient-border featured-project">
+                        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=800&q=80"
+                            alt="Essence E-commerce Platform" class="project-image" loading="lazy">
 
-    <div class="project-header">
-        <h3 class="project-title">
-            <i class="fas fa-store"></i>
-            Essence – Production-Ready E-Commerce Platform
-        </h3>
+                        <div class="project-header">
+                            <h3 class="project-title">
+                                <i class="fas fa-store"></i>
+                                Essence – Production-Ready E-Commerce Platform
+                            </h3>
 
-        <p class="project-desc">
-            A full-stack e-commerce platform built for a natural products brand based in Wayanad, Kerala.
-            Supports secure authentication, role-based admin access, product & order management,
-            and a modern animated UI. Designed for real users and real operations.
-        </p>
+                            <p class="project-desc">
+                                A full-stack e-commerce platform built for a natural products brand based in Wayanad,
+                                Kerala.
+                                Supports secure authentication, role-based admin access, product & order management,
+                                and a modern animated UI. Designed for real users and real operations.
+                            </p>
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> Production-ready system built and deployed for a real client,
+                                with ongoing iteration support.
+                            </p>
 
-        <div class="project-tech">
-            <span class="tech-badge">React</span>
-            <span class="tech-badge">Node.js</span>
-            <span class="tech-badge">Express</span>
-            <span class="tech-badge">MongoDB Atlas</span>
-            <span class="tech-badge">JWT Auth</span>
-            <span class="tech-badge">Admin Dashboard</span>
-            <span class="tech-badge">Render</span>
-            <span class="tech-badge">Vercel</span>
-            <span class="tech-badge">Razorpay (Prepared)</span>
-        </div>
-    </div>
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Express</span>
+                                <span class="tech-badge">MongoDB Atlas</span>
+                                <span class="tech-badge">JWT Auth</span>
+                                <span class="tech-badge">Admin Dashboard</span>
+                                <span class="tech-badge">Render</span>
+                                <span class="tech-badge">Vercel</span>
+                            </div>
+                        </div>
 
-    <div class="project-links">
-        <a href="https://github.com/BASILPETER2002/essence"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn">
-           <i class="fab fa-github"></i> Code
-        </a>
+                        <div class="project-links">
+                            <a href="https://github.com/BASILPETER2002/essence" target="_blank"
+                                rel="noopener noreferrer" class="btn">
+                                <i class="fab fa-github"></i> Code
+                            </a>
 
-        <button class="btn" disabled>
-            <i class="fas fa-lock"></i> Client Deployment
-        </button>
-    </div>
-</div>
+                            <button class="btn" disabled>
+                                <i class="fas fa-lock"></i> Client Deployment
+                            </button>
+                        </div>
+                    </div>
+                    <div style="grid-column: 1 / -1; margin-bottom: 10px;">
+                        <h3 style="
+                            font-family: var(--font-mono);
+                            color: var(--accent);
+                            letter-spacing: 1px;
+                            margin-bottom: 10px;">
+                            // Featured AI Systems
+                        </h3>
+                    </div>
+
+                    <!-- Featured Project: ApplySense -->
+                    <div class="project-card gradient-border featured-project appliesense-card">
+                        <canvas class="ai-bg-canvas"></canvas>
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+                            alt="ApplySense AI Resume Matching Engine" class="project-image" loading="lazy">
+
+                        <div class="project-header">
+                            <h3 class="project-title">
+                                <i class="fas fa-briefcase"></i>
+                                ApplySense – AI Resume-Job Matching Engine
+                                <span class="ai-badge">AI-Powered</span>
+                            </h3>
+
+                            <p class="project-desc">
+                                AI-powered semantic matching engine that aligns resumes with job descriptions
+                                using
+                                embedding-based
+                                similarity search. Implements vector retrieval, skill-gap detection, and
+                                intelligent
+                                ranking logic
+                                to improve candidate-job relevance.
+                            </p>
+
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> Full-stack AI system integrating Pinecone vector
+                                database and
+                                embedding-based retrieval pipeline.
+                            </p>
+
+                            <div class="metrics">
+                                <div class="metric-item">
+                                    <span class="metric-number" data-target="92">0</span>%
+                                    <span class="metric-label">Match Relevance</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-number" data-target="5000">0</span>+
+                                    <span class="metric-label">Embeddings Processed</span>
+                                </div>
+                            </div>
+
+                            <div id="demoPreview" style="display:none; margin-bottom:20px;">
+                                <div
+                                    style="background: var(--editor-bg); padding:15px; border-radius:8px; border: 1px solid var(--border);">
+                                    <p style="margin-bottom: 8px;"><strong>Resume:</strong> Full-Stack Developer
+                                        with React & Node.js</p>
+                                    <p style="margin-bottom: 8px;"><strong>Job:</strong> Backend Engineer –
+                                        Node.js & MongoDB</p>
+                                    <p style="color: var(--accent); font-weight:bold; margin-bottom: 0;">
+                                        Match Score: 87%
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="project-tech">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Pinecone</span>
+                                <span class="tech-badge">Semantic Embeddings</span>
+                                <span class="tech-badge">Vector Search</span>
+                                <span class="tech-badge">AI Matching</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/BASILPETER2002" target="_blank" rel="noopener noreferrer"
+                                class="btn">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <button class="btn" disabled>
+                                <i class="fas fa-check-circle"></i> Completed Project
+                            </button>
+                            <button class="btn" onclick="openCaseStudy()">
+                                <i class="fas fa-book"></i> Case Study
+                            </button>
+                            <button class="btn" onclick="showPreview()">
+                                <i class="fas fa-desktop"></i> Preview UI
+                            </button>
+                        </div>
+                    </div>
 
 
                     <!-- Featured Project 2: Echoform -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Echoform Cognitive Modeling" class="project-image" loading="lazy">
-                        
+                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Echoform Cognitive Modeling" class="project-image" loading="lazy">
+
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-project-diagram"></i> Echoform – Cognitive Identity Modeling System</h3>
-                            <p class="project-desc">A probabilistic engine that infers evolving user behavioral traits from textual interactions. Implements semantic signal extraction, belief update pipelines with temporal decay, and active learning through clarifying questions.</p>
+                            <h3 class="project-title"><i class="fas fa-project-diagram"></i> Echoform –
+                                Cognitive
+                                Identity Modeling System</h3>
+                            <p class="project-desc">A probabilistic engine that infers evolving user behavioral
+                                traits
+                                from textual interactions. Implements semantic signal extraction, belief update
+                                pipelines with temporal decay, and active learning through clarifying questions.
+                            </p>
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> Research-driven prototypes exploring probabilistic
+                                identity
+                                modeling and behavioral inference.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-badge">Python</span>
                                 <span class="tech-badge">FastAPI</span>
@@ -856,7 +1513,8 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/BASILPETER2002/echoform" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://github.com/BASILPETER2002/echoform" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
                             <button class="btn" disabled><i class="fas fa-flask"></i> Capstone Project</button>
                         </div>
                     </div>
@@ -864,11 +1522,21 @@
                     <!-- Project 3: Blood Bank System -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blood Bank System Dashboard" class="project-image" loading="lazy">
-                        
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Blood Bank System Dashboard" class="project-image" loading="lazy">
+
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-tint"></i> Blood Bank Management System</h3>
-                            <p class="project-desc">Full-stack MERN application connecting donors and hospitals. Features role-based dashboards, JWT auth, and real-time inventory management to reduce emergency response time.</p>
+                            <h3 class="project-title"><i class="fas fa-tint"></i> Blood Bank Management System
+                            </h3>
+                            <p class="project-desc">Full-stack MERN application connecting donors and hospitals.
+                                Features role-based dashboards, JWT auth, and real-time inventory management to
+                                reduce
+                                emergency response time.</p>
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> End-to-end MERN application with authentication,
+                                real-time
+                                updates, and role-based workflows.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-badge">React</span>
                                 <span class="tech-badge">Node.js</span>
@@ -878,19 +1546,35 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/BASILPETER2002/blood-bank-system" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://blood-bank-project-ecru.vercel.app/login" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/BASILPETER2002/blood-bank-system" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://blood-bank-project-ecru.vercel.app/login" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i>
+                                Live
+                                Demo</a>
                         </div>
                     </div>
 
                     <!-- Project 4: SyncVerse AI -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="SyncVerse AI Interface" class="project-image" loading="lazy">
-                        
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="SyncVerse AI Interface" class="project-image" loading="lazy">
+
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-robot"></i> SyncVerse AI – AI-Powered Knowledge Platform</h3>
-                            <p class="project-desc">Knowledge vault enabling users to chat with PDFs and YouTube videos. Integrates Google Gemini API, OCR fallback with Tesseract, and multi-document question answering.</p>
+                            <h3 class="project-title"><i class="fas fa-robot"></i> SyncVerse AI – AI-Powered
+                                Knowledge
+                                Platform</h3>
+                            <p class="project-desc">Knowledge vault enabling users to chat with PDFs and YouTube
+                                videos.
+                                Integrates Google Gemini API, OCR fallback with Tesseract, and multi-document
+                                question
+                                answering.</p>
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> Functional prototype integrating AI APIs, OCR pipelines,
+                                and
+                                multi-document querying.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-badge">Python Flask</span>
                                 <span class="tech-badge">React</span>
@@ -900,19 +1584,31 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/BASILPETER2002/syncverse-ai" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://syncverse.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/BASILPETER2002/syncverse-ai" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://syncverse.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
 
                     <!-- Project 5: EventFlow -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EventFlow Rental Platform" class="project-image" loading="lazy">
-                        
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="EventFlow Rental Platform" class="project-image" loading="lazy">
+
                         <div class="project-header">
-                            <h3 class="project-title"><i class="fas fa-calendar-alt"></i> EventFlow – Equipment Rental Platform</h3>
-                            <p class="project-desc">Event equipment rental platform with real-time availability tracking, interactive cart functionality, and Supabase backend for inventory management.</p>
+                            <h3 class="project-title"><i class="fas fa-calendar-alt"></i> EventFlow – Equipment
+                                Rental
+                                Platform</h3>
+                            <p class="project-desc">Event equipment rental platform with real-time availability
+                                tracking, interactive cart functionality, and Supabase backend for inventory
+                                management.
+                            </p>
+                            <p class="project-desc" style="margin-top: -10px; color: var(--text);">
+                                <strong>Scope:</strong> Mini-product focusing on frontend architecture, state
+                                management, and backend integration.
+                            </p>
                             <div class="project-tech">
                                 <span class="tech-badge">TypeScript</span>
                                 <span class="tech-badge">React 18</span>
@@ -921,19 +1617,26 @@
                             </div>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/BASILPETER2002/eventflow" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://eventflow.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/BASILPETER2002/eventflow" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="https://eventflow.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                         </div>
                     </div>
 
                     <!-- Project 6: Family Portal -->
                     <div class="project-card gradient-border">
                         <!-- Project Image -->
-                        <img src="https://images.unsplash.com/photo-1553531889-e6cf4d692b1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Family Tree Visualization" class="project-image" loading="lazy">
-                        
+                        <img src="https://images.unsplash.com/photo-1553531889-e6cf4d692b1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Family Tree Visualization" class="project-image" loading="lazy">
+
                         <div class="project-header">
                             <h3 class="project-title"><i class="fas fa-tree"></i> Kodiyattil Family Website</h3>
-                            <p class="project-desc">Private heritage portal featuring an interactive family tree, digital archives, and secure member access. A personal project preserving family history with modern web technologies.</p>
+                            <p class="project-desc">Private heritage portal featuring an interactive family
+                                tree,
+                                digital archives, and secure member access. A personal project preserving family
+                                history
+                                with modern web technologies.</p>
                             <div class="project-tech">
                                 <span class="tech-badge">React</span>
                                 <span class="tech-badge">Firebase</span>
@@ -946,6 +1649,13 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Add after projects grid -->
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="#" class="btn">
+                        <i class="fas fa-folder-open"></i> View All Projects (12+)
+                    </a>
+                </div>
             </section>
 
             <section id="skills">
@@ -956,7 +1666,7 @@
                         <span class="section-subtitle">{ "stack": ["frontend", "backend", "ai", "devops"] }</span>
                     </div>
                 </div>
-                
+
                 <div class="skills-grid">
                     <div class="skill-category">
                         <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
@@ -965,31 +1675,77 @@
                             <span class="tech-badge">TypeScript</span>
                             <span class="tech-badge">Python</span>
                             <span class="tech-badge">React.js</span>
-                            <span class="tech-badge">Node.js/Express</span>
-                            <span class="tech-badge">Flask/FastAPI</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Express</span>
+                            <span class="tech-badge">Flask</span>
+                            <span class="tech-badge">FastAPI</span>
                             <span class="tech-badge">Tailwind CSS</span>
                         </div>
                     </div>
+
                     <div class="skill-category">
                         <h3><i class="fas fa-brain"></i> AI & Intelligent Systems</h3>
                         <div class="project-tech">
-                            <span class="tech-badge">Gemini AI API</span>
+                            <span class="tech-badge">AI API Integration (Gemini)</span>
                             <span class="tech-badge">Semantic Embeddings</span>
-                            <span class="tech-badge">Explainable AI</span>
-                            <span class="tech-badge">OCR (Tesseract)</span>
-                            <span class="tech-badge">Probabilistic Models</span>
+                            <span class="tech-badge">Intent Inference</span>
+                            <span class="tech-badge">Explainable AI Concepts</span>
+                            <span class="tech-badge">Probabilistic Modeling</span>
                             <span class="tech-badge">Adaptive Systems</span>
+                            <span class="tech-badge">OCR Pipelines (Tesseract)</span>
                         </div>
                     </div>
+
                     <div class="skill-category">
-                        <h3><i class="fas fa-database"></i> Databases & Tools</h3>
+                        <h3><i class="fas fa-sitemap"></i> System Design & Architecture</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">System Design Fundamentals</span>
+                            <span class="tech-badge">Intent-Driven Architectures</span>
+                            <span class="tech-badge">Event-Based Workflows</span>
+                            <span class="tech-badge">Temporal Data Modeling</span>
+                            <span class="tech-badge">Policy-Driven Logic</span>
+                            <span class="tech-badge">API Design (REST)</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-shield-alt"></i> Authentication & Security</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">JWT Authentication</span>
+                            <span class="tech-badge">Role-Based Access Control</span>
+                            <span class="tech-badge">Secure API Design</span>
+                            <span class="tech-badge">Session & Token Management</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Databases & Data Stores</h3>
                         <div class="project-tech">
                             <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">MongoDB Atlas</span>
                             <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">SQLite</span>
                             <span class="tech-badge">Supabase</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-rocket"></i> Deployment & DevOps</h3>
+                        <div class="project-tech">
+                            <span class="tech-badge">Render (Backend Deployment)</span>
+                            <span class="tech-badge">Vercel (Frontend Deployment)</span>
+                            <span class="tech-badge">Environment Configuration</span>
+                            <span class="tech-badge">Production Builds</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><i class="fas fa-tools"></i> Tools & Workflow</h3>
+                        <div class="project-tech">
                             <span class="tech-badge">Git & GitHub</span>
                             <span class="tech-badge">VS Code</span>
-                            <span class="tech-badge">System Design</span>
+                            <span class="tech-badge">Postman</span>
+                            <span class="tech-badge">Figma (Basic Collaboration)</span>
                         </div>
                     </div>
                 </div>
@@ -1003,46 +1759,56 @@
                         <span class="section-subtitle">// get in touch</span>
                     </div>
                 </div>
-                
+
                 <div class="contact-grid">
                     <div class="gradient-border" style="padding: 30px; border-radius: 10px;">
                         <h3 class="project-title" style="margin-bottom: 20px;">Connect With Me</h3>
                         <p style="color: var(--text-secondary); margin-bottom: 30px;">
-                            I'm actively seeking full-stack development opportunities, particularly in roles involving system design, AI integration, or adaptive software. Whether you have a question or want to discuss potential collaborations, my inbox is always open.
+                            I'm actively seeking full-stack development opportunities, particularly in roles involving
+                            system design, AI integration, or adaptive software. Whether you have a question or want to
+                            discuss potential collaborations, my inbox is always open.
                         </p>
-                        <div class="project-links" style="background: transparent; border: none; padding: 0; flex-direction: column;">
-                            <a href="mailto:basilpeter15kodiyattil@gmail.com" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Email Me</a>
-                            <a href="https://www.linkedin.com/in/basil-peter-00220b263/" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="https://github.com/BASILPETER2002" target="_blank" rel="noopener noreferrer" class="btn"><i class="fab fa-github"></i> GitHub</a>
+                        <div class="project-links"
+                            style="background: transparent; border: none; padding: 0; flex-direction: column;">
+                            <a href="mailto:basilpeter15kodiyattil@gmail.com" class="btn btn-primary"><i
+                                    class="fas fa-paper-plane"></i> Email Me</a>
+                            <a href="https://www.linkedin.com/in/basil-peter-00220b263/" target="_blank"
+                                rel="noopener noreferrer" class="btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/BASILPETER2002" target="_blank" rel="noopener noreferrer"
+                                class="btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
-                    
+
                     <div class="contact-form">
-    <form id="contactForm" action="https://formspree.io/f/mykkggwd" method="POST">
-        <!-- Hidden fields for Formspree -->
-        <input type="hidden" name="_subject" value="New message from your portfolio!">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="form-group">
-            <input type="text" name="name" class="form-input" placeholder="Name" required aria-label="Name">
-        </div>
-        <div class="form-group">
-            <input type="email" name="_replyto" class="form-input" placeholder="Email" required aria-label="Email">
-        </div>
-        <div class="form-group">
-            <textarea name="message" class="form-textarea" placeholder="Message" required aria-label="Message"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> Send Message
-        </button>
-    </form>
-</div>
+                        <form id="contactForm" action="https://formspree.io/f/mykkggwd" method="POST">
+                            <!-- Hidden fields for Formspree -->
+                            <input type="hidden" name="_subject" value="New message from your portfolio!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-input" placeholder="Name" required
+                                    aria-label="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="_replyto" class="form-input" placeholder="Email" required
+                                    aria-label="Email">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" class="form-textarea" placeholder="Message" required
+                                    aria-label="Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </section>
 
             <footer class="footer">
                 <p>~ $ echo "Built with ❤️ by Basil Peter"</p>
-                <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">© 2025 Basil Peter • Last commit: <span id="currentDate"></span></p>
+                <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.7;">© 2025 Basil Peter • Last commit: <span
+                        id="currentDate"></span></p>
             </footer>
         </div>
     </div>
@@ -1076,7 +1842,7 @@
 
         function typeLoop() {
             const currentCmd = commands[cmdIdx];
-            
+
             if (isDeleting) {
                 typingElement.textContent = currentCmd.substring(0, charIdx - 1);
                 charIdx--;
@@ -1106,9 +1872,9 @@
             { cmd: "whoami", out: "basil-peter --role full-stack-dev --focus adaptive-systems" },
             { cmd: "location", out: "India (IST)" },
             { cmd: "cat stack.txt", out: "React, TypeScript, Python, Node.js, AI Integration, System Design" },
-            { cmd: "git status", out: "On branch main, working on IntentOS & Echoform..." }
+            { cmd: "git status", out: "On branch main, shipped ApplySense & Essence. Exploring adaptive systems..." }
         ];
-        
+
         let lineDelay = 0;
         lines.forEach((line, index) => {
             setTimeout(() => {
@@ -1141,7 +1907,7 @@
         window.addEventListener('scroll', () => {
             let current = '';
             const scrollY = window.scrollY;
-            
+
             // Progress Bar
             const winHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (scrollY / winHeight) * 100;
@@ -1169,19 +1935,19 @@
         });
 
         // --- 5. Form Handling (Real with Formspree) ---
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const btn = this.querySelector('button');
             const originalContent = btn.innerHTML;
             const originalText = btn.textContent;
-            
+
             btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
             btn.disabled = true;
-            
+
             // Get form data
             const formData = new FormData(this);
-            
+
             // Send to Formspree
             fetch(this.action, {
                 method: 'POST',
@@ -1190,40 +1956,229 @@
                     'Accept': 'application/json'
                 }
             })
-            .then(response => {
-                if (response.ok) {
-                    // Success
-                    btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
-                    btn.style.background = 'var(--success)';
-                    this.reset();
-                    
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        btn.innerHTML = '<i class="fas fa-check"></i> Sent Successfully!';
+                        btn.style.background = 'var(--success)';
+                        this.reset();
+
+                        setTimeout(() => {
+                            btn.innerHTML = originalContent;
+                            btn.style.background = '';
+                            btn.disabled = false;
+                        }, 3000);
+                    } else {
+                        // Error
+                        throw new Error('Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
+                    btn.style.background = 'var(--error)';
+
                     setTimeout(() => {
                         btn.innerHTML = originalContent;
                         btn.style.background = '';
                         btn.disabled = false;
                     }, 3000);
-                } else {
-                    // Error
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Failed to Send';
-                btn.style.background = 'var(--error)';
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalContent;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                }, 3000);
-            });
+                });
         });
 
         // Date Footer
         const dateSpan = document.getElementById('currentDate');
         const today = new Date();
         dateSpan.textContent = today.toISOString().split('T')[0];
+
+        // --- ApplySense Upgrades JS ---
+        // Metric Counter Animation
+        const counters = document.querySelectorAll('.metric-number');
+        let metricsAnimated = false;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 60; // Spread animation over ~60 frames
+
+                const updateCount = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.floor(count);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+
+                updateCount();
+            });
+        };
+
+        // Trigger when ApplySense is visible
+        window.addEventListener('scroll', () => {
+            const appliesense = document.querySelector('.appliesense-card');
+            if (!appliesense || metricsAnimated) return;
+            const rect = appliesense.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                animateCounters();
+                metricsAnimated = true;
+            }
+        });
+
+        // AI Vector Background Animation
+        const aiCanvas = document.querySelector('.ai-bg-canvas');
+        if (aiCanvas) {
+            const ctx = aiCanvas.getContext('2d');
+
+            const resizeCanvas = () => {
+                // Try grabbing client dimensions since element is positioned absolute
+                aiCanvas.width = aiCanvas.parentElement.clientWidth;
+                aiCanvas.height = aiCanvas.parentElement.clientHeight;
+            };
+
+            window.addEventListener('resize', resizeCanvas);
+            setTimeout(resizeCanvas, 150);
+
+            const nodes = [];
+            const nodeCount = 20;
+
+            for (let i = 0; i < nodeCount; i++) {
+                nodes.push({
+                    x: Math.random() * 800,
+                    y: Math.random() * 600,
+                    vx: (Math.random() - 0.5) * 0.8,
+                    vy: (Math.random() - 0.5) * 0.8
+                });
+            }
+
+            function animateVectors() {
+                if (!aiCanvas.width) {
+                    resizeCanvas();
+                    requestAnimationFrame(animateVectors);
+                    return;
+                }
+
+                ctx.clearRect(0, 0, aiCanvas.width, aiCanvas.height);
+
+                nodes.forEach(n => {
+                    n.x += n.vx;
+                    n.y += n.vy;
+
+                    // Re-position if out of bounds instead of bouncing, for continuous drift
+                    if (n.x < 0 || n.x > aiCanvas.width) n.x = Math.random() * aiCanvas.width;
+                    if (n.y < 0 || n.y > aiCanvas.height) n.y = Math.random() * aiCanvas.height;
+
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+                    ctx.fillStyle = "#58a6ff";
+                    ctx.fill();
+                });
+
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const dx = nodes[i].x - nodes[j].x;
+                        const dy = nodes[i].y - nodes[j].y;
+                        const dist = Math.sqrt(dx * dx + dy * dy);
+                        if (dist < 120) {
+                            ctx.strokeStyle = "rgba(88,166,255,0.15)";
+                            ctx.beginPath();
+                            ctx.moveTo(nodes[i].x, nodes[i].y);
+                            ctx.lineTo(nodes[j].x, nodes[j].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+
+                requestAnimationFrame(animateVectors);
+            }
+
+            animateVectors();
+        }
+
+        // Case Study Modal Logic
+        function openCaseStudy() {
+            document.getElementById("caseStudyModal").style.display = "block";
+        }
+
+        function closeCaseStudy() {
+            document.getElementById("caseStudyModal").style.display = "none";
+        }
+
+        window.addEventListener('click', function (event) {
+            const modal = document.getElementById("caseStudyModal");
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Demo Preview Toggle
+        function showPreview() {
+            const preview = document.getElementById("demoPreview");
+            if (preview.style.display === "none") {
+                preview.style.display = "block";
+                // Add a small fade-in effect
+                preview.style.opacity = 0;
+                let op = 0;
+                let timer = setInterval(function () {
+                    if (op >= 1) {
+                        clearInterval(timer);
+                    }
+                    preview.style.opacity = op;
+                    op += 0.1;
+                }, 10);
+            } else {
+                preview.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- Case Study Modal HTML -->
+    <div id="caseStudyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCaseStudy()">&times;</span>
+            <h2 style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <i class="fas fa-briefcase" style="color: var(--accent);"></i> ApplySense – System Architecture
+            </h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+                ApplySense uses embedding-based semantic matching to compare resumes and job descriptions.
+                The system generates vector embeddings, stores them in Pinecone, and performs similarity
+                ranking to determine relevance.
+            </p>
+            <ul style="color: var(--text-secondary); margin-bottom: 25px; padding-left: 20px; line-height: 1.8;">
+                <li><strong>Vector Embeddings</strong> via LLM</li>
+                <li><strong>Pinecone</strong> Similarity Search</li>
+                <li><strong>Skill Gap</strong> Detection Layer</li>
+                <li><strong>Ranking</strong> + Optimization Feedback</li>
+            </ul>
+            <img src="https://i.imgur.com/3ZQ3Z6T.png" alt="ApplySense Architecture Diagram"
+                style="width:100%; margin-top:10px; border-radius:8px; border: 1px solid var(--border);">
+        </div>
+    </div>
+
+    <!-- Add before closing body tag -->
+    <button id="backToTop" class="btn"
+        style="position: fixed; bottom: 30px; right: 30px; display: none; z-index: 99; width: 45px; height: 45px; padding: 0; justify-content: center; border-radius: 50%;">
+        <i class="fas fa-arrow-up" style="margin: 0;"></i>
+    </button>
+
+    <script>
+        // Back to top button logic
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
+
 </html>
